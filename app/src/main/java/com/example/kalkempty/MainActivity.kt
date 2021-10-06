@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.nr1).setOnClickListener {
             findViewById<TextView>(R.id.textView).text = "1"
-            //
+
         }
     }
 }
