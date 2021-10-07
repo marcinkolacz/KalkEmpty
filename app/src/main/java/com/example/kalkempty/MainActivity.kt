@@ -8,7 +8,9 @@ import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        var wynik = 0;
+        var wynik = 0//przechowywanie rezultatu działania
+        var napis = wynik.toString()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //findViewById<Button>(R.id.button).text.toString()
@@ -18,7 +20,9 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.nr1).setOnClickListener {
             findViewById<TextView>(R.id.textView).text = "1"
-//
+        }
+        findViewById<Button>(R.id.nr2).setOnClickListener {
+            findViewById<TextView>(R.id.textView).text = "2"
         }
     }
 }
