@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         var wynik = 0//przechowywanie rezultatu działania
         var napis = wynik.toString()
+        wynik = Integer.parseInt(napis)
+
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
