@@ -12,19 +12,37 @@ class MainActivity : AppCompatActivity() {
         var napis = wynik.toString()
         wynik = Integer.parseInt(napis)
 
+        var  liczbaPierwsza = 0
+        var liczbaDruga = 0
+
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //findViewById<Button>(R.id.button).text.toString()
         findViewById<Button>(R.id.button).setOnClickListener {
-            findViewById<Button>(R.id.button).text = "0";
+            //findViewById<Button>(R.id.button).text = "0";
+        }
+
+        findViewById<TextView>(R.id.textView).text =""
+
+        findViewById<Button>(R.id.PlusButton).setOnClickListener {
+            liczbaPierwsza = findViewById<TextView>(R.id.textView).text.toString().toInt()
+            //wynik = Integer.parseInt(napis)
+            findViewById<TextView>(R.id.textView).text = ""
+        }
+        findViewById<Button>(R.id.wynikButton).setOnClickListener {
+            liczbaDruga = findViewById<TextView>(R.id.textView).text.toString().toInt()
+            wynik = liczbaPierwsza + liczbaDruga
+            findViewById<TextView>(R.id.textView).text = wynik.toString()
         }
 
         findViewById<Button>(R.id.nr1).setOnClickListener {
-            findViewById<TextView>(R.id.textView).text = "1"
+            findViewById<TextView>(R.id.textView).text =
+                findViewById<TextView>(R.id.textView).text.toString() + "1"
         }
         findViewById<Button>(R.id.nr2).setOnClickListener {
-            findViewById<TextView>(R.id.textView).text = "2"
+            findViewById<TextView>(R.id.textView).text =
+                findViewById<TextView>(R.id.textView).text.toString() + "2"
         }
     }
 }
